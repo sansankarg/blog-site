@@ -1,0 +1,18 @@
+{
+  "site": {
+    "title": "Arthur Revolt",
+    "description": "I’m a demigod of ideas—a storm of thoughts roar inside me, but only the sharpest survive. I don’t just create, I forge. And what I bring to you… is nothing less than the best.",
+    "baseUrl": "http://localhost:5173"
+  },
+  "paths": {
+    "content": "/content",
+    "output": "./dist"
+  },
+  "theme": {
+    "color": "red",
+    "darkMode": false
+  },
+  "pages": [
+    { "title": "Powered by curiosity", "file": "powered-by-curiosity.md" }
+  ]
+}
