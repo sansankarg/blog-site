@@ -88,9 +88,9 @@ const Home = () => {
   const filteredPosts = posts.filter(post => {
     const matchesTags =
       selectedTags.length === 0 || post.tags?.some(tag => selectedTags.includes(tag));
-
+  
     const search = searchText.toLowerCase();
-
+  
     const matchesSearch =
       post.title.toLowerCase().includes(search) ||
       (post.date && new Date(post.date).toLocaleDateString('en-US', {
@@ -98,9 +98,13 @@ const Home = () => {
         month: 'short',
         day: 'numeric',
       }).toLowerCase().includes(search));
-
-    return matchesTags && matchesSearch;
+  
+    const isPastPost =
+      post.date && new Date(post.date) <= new Date();
+  
+    return matchesTags && matchesSearch && isPastPost;
   });
+  
 
   return (
     <div className="home-container">
