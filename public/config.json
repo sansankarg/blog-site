@@ -13,6 +13,7 @@
     "darkMode": false
   },
   "pages": [
-    { "title": "Powered by curiosity", "file": "powered-by-curiosity.md" }
+    { "title": "Powered by curiosity", "file": "powered-by-curiosity.md" },
+    { "title": "Seeing Through the TV", "file": "seeing-through-the-tv.md" }
   ]
 }

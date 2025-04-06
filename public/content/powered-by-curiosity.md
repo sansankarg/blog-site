@@ -1,7 +1,7 @@
 ---
 title: "Powered by curiosity"
 description: "A personal journey from breaking toys with scissors to understanding the magic behind microcontrollers — and why I started this blog to share everything I learn along the way."
-date: "2025-04-06"
+date: "2025-04-05"
 tags: [Life, Engineering, Tech, Personal]
 ---
 
