@@ -1,6 +1,6 @@
 ---
 title: "Seeing Through the TV"
-date: 2025-04-16
+date: 2025-04-6
 tags: [curious, TV, journey, tech]
 description: "This is a journey through one retina, staring with a TV screen and diving deep into the tech beneath."
 ---
