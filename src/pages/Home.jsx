@@ -110,10 +110,13 @@ const Home = () => {
     <div className="home-container">
       {!onlyPosts && (
         <header className="site-header">
+
           <h1 className="site-title">{siteConfig.title}</h1>
           <p className="site-description">{siteConfig.description}</p>
         </header>
       )}
+      
+
 
       <div className="search-tag-container">
         <div className="post-controls">

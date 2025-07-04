@@ -1,8 +1,7 @@
 {
   "site": {
     "title": "Arthur Revolt",
-    "description": "I’m a demigod of ideas—a storm of thoughts roar inside me, but only the sharpest survive. I don’t just create, I forge. And what I bring to you… is nothing less than the best.",
-    "baseUrl": "http://localhost:5173"
+"description": "This isn't your typical about me because I'm not here to fit into anything. This is just my little corner of the internet, where I put some parts of myself out there.\n\nI'm a student who enjoys building things mostly to solve problems around me or just to make things a little easier. I've always had this urge to create things for myself. Sure, I know we humans depend on each other and no one can build everything alone, but still, I try.\n\nI pick up new hobbies frequently: music, art, politics, history, books, travel... Anything I see new, I'm into it. I'm not amazing at all of them, but I'm curious enough to keep jumping in. You could say I'm a jack of many trades (except love, I got skipped on that module, and honestly, I'm fine with that).\n\nThis site is where I document and share pieces of me. Right now, it's mostly blogs. But soon, you'll see more things I've built, ideas I have, random thoughts, maybe even things I'm still figuring out. It's all a work in progress. Just like me.",    "baseUrl": "http://localhost:5173"
   },
   "paths": {
     "content": "/content",

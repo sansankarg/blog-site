@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import MarkdownPage from './pages/MarkdownPage';
 import { Buffer } from 'buffer';
 window.Buffer = Buffer;
+import Announcement from './components/Anouncement';
 
 
 function App() {
@@ -28,7 +29,9 @@ function App() {
 
   return (
     <div>
+      <Announcement/>
       <Navbar title={config.site.title} />
+
       <div style={styles.content}>
         <Routes>
           <Route path="/" element={<Home />} />
