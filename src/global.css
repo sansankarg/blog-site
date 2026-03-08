@@ -141,9 +141,10 @@ li {
 }
 
 .site-description {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: var(--desc-color);
   white-space: pre-line;
+  text-align: center;
 }
 
 .posts {
