@@ -59,6 +59,6 @@ This post itself is written using the same tool.
 
 I’m planning to write more consistently from now on.
 
-[download: https://download1078.mediafire.com/8e44pbd193zgTj9XDB52rHh2A2KZnetPLcOvdP9BCcFaBPixeON1FrH0M3vsrRzv3bas0kuBIc49bmKFM6FyDGIK_AVcb4ifOSpy68J7FE8Vasfk_QfVd90-TDYrsGH5GcKNl8qCFczlWRqCR0UXi6dyZfA_wX5ppTND2dFy8EldfA/urlvxvxrstm52be/verbo-0.1.0-setup.exe | Download Verbo | Start writing better today with AI-powered feedback and rephrasing. Bugs or quirky features may exist. Please take backups of your data. Feel free to reach out with feedback or ideas.]
+[download: https://download1078.mediafire.com/8e44pbd193zgTj9XDB52rHh2A2KZnetPLcOvdP9BCcFaBPixeON1FrH0M3vsrRzv3bas0kuBIc49bmKFM6FyDGIK_AVcb4ifOSpy68J7FE8Vasfk_QfVd90-TDYrsGH5GcKNl8qCFczlWRqCR0UXi6dyZfA_wX5ppTND2dFy8EldfA/urlvxvxrstm52be/verbo-0.1.0-setup.exe | Download Verbo for Windows | Start writing better today with AI-powered feedback and rephrasing. Bugs or quirky features may exist. Please take backups of your data. Feel free to reach out with feedback or ideas.]
 
 Fingers crossed.
