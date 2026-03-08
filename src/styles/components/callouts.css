@@ -1,0 +1,51 @@
+/* ===== Callout Boxes ===== */
+.callout {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  margin: 1.5rem 0;
+  border-left: 4px solid;
+  align-items: flex-start;
+}
+
+.callout-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.callout-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.callout.tip {
+  background: rgba(34, 197, 94, 0.08);
+  border-color: #22c55e;
+}
+.callout.tip .callout-icon::before { content: '💡'; }
+
+.callout.info {
+  background: rgba(59, 130, 246, 0.08);
+  border-color: #3b82f6;
+}
+.callout.info .callout-icon::before { content: 'ℹ️'; }
+
+.callout.warning {
+  background: rgba(234, 179, 8, 0.08);
+  border-color: #eab308;
+}
+.callout.warning .callout-icon::before { content: '⚠️'; }
+
+.callout.danger {
+  background: rgba(239, 68, 68, 0.08);
+  border-color: #ef4444;
+}
+.callout.danger .callout-icon::before { content: '🚫'; }
+
+/* Dark mode callout adjustments */
+body.dark-mode .callout.tip { background: rgba(34, 197, 94, 0.12); }
+body.dark-mode .callout.info { background: rgba(59, 130, 246, 0.12); }
+body.dark-mode .callout.warning { background: rgba(234, 179, 8, 0.12); }
+body.dark-mode .callout.danger { background: rgba(239, 68, 68, 0.12); }

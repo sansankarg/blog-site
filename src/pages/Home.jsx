@@ -23,7 +23,18 @@ const Home = () => {
         const cfg = await configRes.json();
         console.log("Loaded config:", cfg);
 
-        setSiteConfig(cfg.site || {});
+        let siteDescriptionHtml = cfg.site?.description || '';
+        if (siteDescriptionHtml.endsWith('.md')) {
+          try {
+            const descRes = await fetch(`/content/${siteDescriptionHtml}`);
+            const descText = await descRes.text();
+            const { html } = await markdownToHtml(descText);
+            siteDescriptionHtml = html;
+          } catch (err) {
+            console.error("Failed to load site description:", err);
+          }
+        }
+        setSiteConfig({ ...(cfg.site || {}), description: siteDescriptionHtml });
 
         const tagSet = new Set();
 
@@ -112,7 +123,10 @@ const Home = () => {
         <header className="site-header">
 
           <h1 className="site-title">{siteConfig.title}</h1>
-          <p className="site-description">{siteConfig.description}</p>
+          <div 
+            className="site-description" 
+            dangerouslySetInnerHTML={{ __html: siteConfig.description }}
+          />
         </header>
       )}
       

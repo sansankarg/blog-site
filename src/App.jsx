@@ -29,7 +29,7 @@ function App() {
 
   return (
     <div>
-      <Announcement/>
+      {/* <Announcement/> */}
       <Navbar title={config.site.title} />
 
       <div style={styles.content}>

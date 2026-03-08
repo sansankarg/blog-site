@@ -16,6 +16,8 @@
     { "title": "Hello World", "file": "hello.md" },
     { "title": "My Second Post", "file": "second-post.md" },
     { "title": "What is life ?", "file": "new.md" },
-    { "title": "journey", "file": "life-journey.md" }
+    { "title": "journey", "file": "life-journey.md" },
+    { "title": "Introducing our New App", "file": "app-launch.md" },
+    { "title": "The Art of Making Things", "file": "showcase.md" }
   ]
 }

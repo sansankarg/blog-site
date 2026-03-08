@@ -4,6 +4,8 @@ import { BrowserRouter } from 'react-router-dom'; // ✅ Import this
 import App from './App';
 import './index.css';
 import './global.css';
+import './styles/components/index.css';
+
 import { Buffer } from 'buffer';
 window.Buffer = Buffer;
 

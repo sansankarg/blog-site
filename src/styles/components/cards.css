@@ -1,0 +1,123 @@
+/* ===== Link Preview Card ===== */
+.link-card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.25rem;
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  background: var(--card-bg);
+  text-decoration: none !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 1.75rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.link-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-color: var(--link-color);
+}
+
+.link-card-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--tag-button);
+  border-radius: 10px;
+}
+
+.link-card-info {
+  flex: 1;
+}
+
+.link-card-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--title-color);
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.link-card-desc {
+  font-size: 0.88rem;
+  color: var(--muted-text);
+  display: block;
+  line-height: 1.4;
+}
+
+.link-card-url {
+  font-size: 0.78rem;
+  color: var(--link-color);
+  display: block;
+  margin-top: 0.25rem;
+  opacity: 0.8;
+}
+
+.link-card-arrow {
+  color: var(--muted-text);
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+
+.link-card:hover .link-card-arrow {
+  transform: translateX(4px);
+  color: var(--link-color);
+}
+
+/* ===== Profile / Author Card ===== */
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  margin: 2rem 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.profile-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50% !important;
+  object-fit: cover;
+  flex-shrink: 0;
+  margin: 0 !important;
+  box-shadow: none !important;
+  border: 3px solid var(--card-border) !important;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-name {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--title-color);
+  display: block;
+  margin-bottom: 0.15rem;
+}
+
+.profile-role {
+  font-size: 0.9rem;
+  color: var(--muted-text);
+  display: block;
+}
+
+.profile-handle {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.82rem;
+  background: var(--tag-button);
+  color: var(--text-color);
+  padding: 2px 10px;
+  border-radius: 999px;
+  text-decoration: none;
+}

@@ -33,7 +33,6 @@ const MarkdownPage = () => {
 
       loadedPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
       setPosts(loadedPosts);
-      setSiteConfig(cfg.site);
     };
 
     loadPosts();

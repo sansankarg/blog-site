@@ -1,0 +1,56 @@
+/* ===== Spoiler / Collapsible ===== */
+.spoiler-block {
+  margin: 1.5rem 0;
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--card-bg);
+}
+
+.spoiler-block summary {
+  padding: 0.85rem 1.25rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  list-style: none;
+  user-select: none;
+  transition: background 0.2s;
+}
+
+.spoiler-block summary::-webkit-details-marker {
+  display: none;
+}
+
+.spoiler-block summary::before {
+  content: '▶';
+  font-size: 0.7rem;
+  color: var(--muted-text);
+  transition: transform 0.25s ease;
+  display: inline-block;
+}
+
+.spoiler-block[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.spoiler-block summary:hover {
+  background: color-mix(in srgb, var(--card-bg), var(--border-color) 30%);
+}
+
+.spoiler-content {
+  padding: 1rem 1.25rem;
+  border-top: 1px solid var(--card-border);
+  font-size: 0.95rem;
+  color: var(--desc-color);
+  line-height: 1.7;
+  animation: spoilerFadeIn 0.2s ease;
+}
+
+@keyframes spoilerFadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
