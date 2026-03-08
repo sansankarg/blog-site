@@ -463,15 +463,42 @@ li {
   }
 
   .footer-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
     color: var(--muted-text);
   }
-  
-  .footer-content p {
-    margin: 0.4rem 0;
-    font-size: 0.95rem;
+
+  .footer-bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    gap: 1rem;
+  }
+
+  .footer-contact-simple {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .footer-email {
+    color: var(--link-color);
+    font-weight: 500;
+    text-decoration: underline;
+  }
+
+  .footer-stats {
+    font-family: 'Courier New', monospace;
+    opacity: 0.7;
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 600px) {
+    .footer-bottom-row {
+      flex-direction: column;
+      gap: 0.75rem;
+      text-align: center;
+    }
   }
 /* ===== Floating Announcement Banner (Dismissible) ===== */
 .announcement-banner {

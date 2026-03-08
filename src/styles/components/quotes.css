@@ -1,39 +1,39 @@
 /* ===== Pull Quote ===== */
 .pull-quote {
-  margin: 2.5rem 0;
-  padding: 1.5rem 2rem;
-  border-left: 4px solid var(--link-color);
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+  border-left: 3px solid var(--link-color);
   background: var(--card-bg);
-  border-radius: 0 12px 12px 0;
+  border-radius: 0 8px 8px 0;
   position: relative;
 }
 
 .pull-quote::before {
   content: '\201C';
-  font-size: 4rem;
+  font-size: 2.5rem;
   color: var(--link-color);
-  opacity: 0.3;
+  opacity: 0.2;
   line-height: 1;
   position: absolute;
-  top: -0.5rem;
-  left: 0.75rem;
+  top: -0.1rem;
+  left: 0.5rem;
   font-family: Georgia, serif;
 }
 
 .pull-quote-text {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-style: italic;
   color: var(--title-color);
-  line-height: 1.7;
-  margin-bottom: 0.75rem;
-  padding-top: 0.5rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  padding-top: 0.25rem;
 }
 
 .pull-quote-author {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
   color: var(--muted-text);
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
 }
 
 .pull-quote-author::before {

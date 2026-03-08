@@ -6,10 +6,15 @@ const Footer = ({ postCount, tagscount }) => {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <p>Arthur Revolt &copy; {currentYear} </p> 
-        <p>All rights reserved </p> 
-        <p>stats : {postCount} {postCount === 1 ? 'post' : 'posts'} , {tagscount} {postCount === 1 ? 'tag' : 'tags'}</p>
-        
+        <div className="footer-bottom-row">
+          <div className="footer-contact-simple">
+            <span>Get in touch: </span>
+            <a href="mailto:arthurrevolt.dev@gmail.com" className="footer-email">arthurrevolt.dev@gmail.com</a>
+          </div>
+          <div className="footer-stats">
+            {postCount} {postCount === 1 ? 'post' : 'posts'} • {tagscount} {tagscount === 1 ? 'tag' : 'tags'}
+          </div>
+        </div>
       </div>
     </footer>
   );

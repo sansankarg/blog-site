@@ -72,13 +72,19 @@ function processHero(md) {
 }
 
 function processQuote(md) {
+  // [quote: "Text" | Author] or [quote: "Text"]
   return md.replace(
-    /\[quote:\s*"?([^"|]+)"?\s*\|\s*([^\]]+)\]/g,
-    (_, text, author) => `
+    /\[quote:\s*"?([^"|\]]+)"?\s*(?:\|\s*([^\]]+))?\]/g,
+    (_, text, author) => {
+      const authorHtml = author 
+        ? `<span class="pull-quote-author">${author.trim()}</span>` 
+        : '';
+      return `
 <div class="pull-quote">
   <p class="pull-quote-text">${text.trim()}</p>
-  <span class="pull-quote-author">${author.trim()}</span>
-</div>`
+  ${authorHtml}
+</div>`;
+    }
   );
 }
 
