@@ -1,5 +1,5 @@
 ---
-title: "Introducing our New App"
+title: "Back to Writing, Slowly"
 date: "2026-03-02"
 description: ""
 tags: ["release", "app", "download"]
