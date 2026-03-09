@@ -9,7 +9,7 @@ tags: ["loneliness", "tech", "social"]
 
 There’s a classmate in my college who is really into photography. I’ve never really spoken to him after our first year. Recently, I started thinking about picking up photography as a hobby, and I realized I had two choices: I could ask him for advice, or I could just search the internet.  
 
-The second option is obviously more efficient. Within seconds, I can find workout videos, diet plans, and expert opinions. From a practical standpoint, it seems like the smarter choice.  
+The second option is obviously more efficient. Within seconds, I can find tutorials, camera reviews, and expert tips. From a practical standpoint, it seems like the smarter choice.  
 
 But something subtle disappears in that decision. Technology doesn’t just replace human effort-it removes the **situations where relationships begin**. It quietly reduces the **quantity** of interactions while also affecting their **quality**. Digital communication gives us a safer version of social interaction. Messages can be edited, reactions delayed, and difficult moments ignored. In many ways, digital connection offers the **feeling of companionship** while keeping emotional distance.  
 
