@@ -13,6 +13,7 @@
     "darkMode": false
   },
   "pages": [
-    { "title": "Back to Writing, Slowly", "file": "app-launch.md" }
+    { "title": "Back to Writing, Slowly", "file": "app-launch.md" },
+    { "title": "The Disappearing Reasons to Reach Out", "file": "loneliness.md" }
   ]
 }
