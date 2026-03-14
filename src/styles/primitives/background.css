@@ -1,0 +1,57 @@
+/* =================================================================
+   FLUID ANIMATED BACKGROUND
+   Floating blurred gradient blobs creating depth and fluid motion.
+   Applied via body pseudo-elements — no extra markup needed.
+   ================================================================= */
+
+/* Background wrapper (applied to root container) */
+.fluid-bg {
+  position: relative;
+  min-height: 100vh;
+  isolation: isolate;
+}
+
+/* ── Blob Layer (behind everything) ── */
+.fluid-bg::before,
+.fluid-bg::after {
+  content: '';
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: -1;
+  will-change: transform;
+}
+
+/* Blob 1: Large indigo */
+.fluid-bg::before {
+  width: 50vw;
+  height: 50vw;
+  max-width: 600px;
+  max-height: 600px;
+  top: -10%;
+  right: -10%;
+  background: radial-gradient(circle, var(--blob-1) 0%, var(--blob-2) 50%, transparent 70%);
+  animation: blob-drift-1 25s var(--ease-fluid) infinite;
+}
+
+/* Blob 2: Teal/Cyan */
+.fluid-bg::after {
+  width: 45vw;
+  height: 45vw;
+  max-width: 500px;
+  max-height: 500px;
+  bottom: -5%;
+  left: -8%;
+  background: radial-gradient(circle, var(--blob-3) 0%, var(--blob-5) 50%, transparent 70%);
+  animation: blob-drift-2 30s var(--ease-fluid) infinite;
+}
+
+/* Extra blob via box-shadow on body (no extra pseudo needed) */
+body {
+  background-color: var(--color-bg);
+  background-image:
+    radial-gradient(ellipse at 75% 20%, var(--blob-4) 0%, transparent 50%),
+    radial-gradient(ellipse at 25% 80%, var(--blob-5) 0%, transparent 50%);
+  background-attachment: fixed;
+}

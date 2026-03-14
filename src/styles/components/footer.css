@@ -1,0 +1,80 @@
+/* =================================================================
+   FOOTER COMPONENT
+   Glass panel footer with soft glow.
+   ================================================================= */
+
+.footer {
+  color: var(--color-text-muted);
+  padding: var(--space-8) var(--space-4);
+  margin-top: var(--space-16);
+  text-align: center;
+  font-family: var(--font-body);
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border-top: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-glass-highlight), 0 -4px 20px rgba(79, 70, 229, 0.04);
+}
+
+.footer-content {
+  max-width: var(--container-md);
+  margin: 0 auto;
+  color: var(--color-text-muted);
+}
+
+.footer-bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--text-sm);
+  gap: var(--space-4);
+}
+
+.footer-contact-simple {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+.footer-email {
+  color: var(--color-accent);
+  font-weight: var(--weight-medium);
+  text-decoration: none;
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.footer-email::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--color-accent);
+  transition: width var(--transition-normal);
+}
+
+.footer-email:hover {
+  color: var(--color-accent-hover);
+  text-decoration: none;
+}
+
+.footer-email:hover::after {
+  width: 100%;
+}
+
+.footer-stats {
+  font-family: var(--font-mono);
+  opacity: 0.6;
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wide);
+}
+
+@media (max-width: 600px) {
+  .footer-bottom-row {
+    flex-direction: column;
+    gap: var(--space-3);
+    text-align: center;
+  }
+}

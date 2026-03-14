@@ -1,0 +1,36 @@
+/* =================================================================
+   LAYOUT PRIMITIVES
+   Responsive containers, grids, and spacing utilities.
+   ================================================================= */
+
+/* ── Fluid Container ── */
+.fluid-container {
+  width: 90%;
+  max-width: var(--container-md);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fluid-container-lg {
+  width: 90%;
+  max-width: var(--container-lg);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── Card Grid ── */
+.card-grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+/* ── Section Spacing ── */
+.section-spacing {
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-8);
+}
+
+.section-spacing-lg {
+  padding-top: var(--space-12);
+  padding-bottom: var(--space-12);
+}

@@ -1,0 +1,247 @@
+/* =================================================================
+   READING PROGRESS
+   Top progress bar, floating ETA badge, reading metadata strip,
+   and resume toast. All consuming design tokens.
+   ================================================================= */
+
+/* ── Top Progress Bar ── */
+.reading-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: var(--gradient-accent);
+  z-index: 10000;
+  transition: width 80ms linear;
+  border-radius: 0 var(--radius-full) var(--radius-full) 0;
+  box-shadow: 0 0 10px var(--color-accent-glow), 0 0 4px var(--color-accent-glow);
+}
+
+.reading-progress-bar:hover {
+  height: 5px;
+}
+
+/* Glow trail at the leading edge */
+.reading-progress-bar::after {
+  content: '';
+  position: absolute;
+  right: -2px;
+  top: -2px;
+  width: 80px;
+  height: 7px;
+  background: radial-gradient(ellipse at right, var(--color-accent-glow) 0%, transparent 80%);
+  border-radius: var(--radius-full);
+  pointer-events: none;
+}
+
+/* ── Reading Metadata Strip ── */
+.reading-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  margin-top: var(--space-3);
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-accent-soft);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-secondary);
+  width: fit-content;
+}
+
+.reading-meta-icon {
+  font-size: var(--text-base);
+  line-height: 1;
+}
+
+.reading-meta-separator {
+  color: var(--color-text-muted);
+  opacity: 0.4;
+  font-weight: var(--weight-normal);
+}
+
+.reading-meta-done {
+  color: var(--color-success);
+  font-weight: var(--weight-semibold);
+}
+
+.reading-meta-percent {
+  color: var(--color-accent);
+  font-weight: var(--weight-semibold);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+}
+
+/* ── Floating ETA Badge ── */
+.reading-eta-badge {
+  position: fixed;
+  bottom: var(--space-6);
+  right: var(--space-6);
+  background: var(--glass-bg-strong);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-full);
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-secondary);
+  box-shadow: var(--shadow-glass-highlight), var(--shadow-lg);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+
+  /* Hidden by default */
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity var(--transition-normal),
+    transform var(--transition-normal);
+  pointer-events: none;
+}
+
+.reading-eta-badge.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.reading-eta-badge .eta-icon {
+  font-size: var(--text-base);
+}
+
+.reading-eta-badge .eta-text {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wide);
+}
+
+/* ── Resume Toast ── */
+.resume-toast {
+  position: fixed;
+  bottom: var(--space-8);
+  left: 50%;
+  transform: translateX(-50%) translateY(120px);
+  background: var(--glass-bg-strong);
+  backdrop-filter: blur(var(--glass-blur-heavy));
+  -webkit-backdrop-filter: blur(var(--glass-blur-heavy));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-3) var(--space-5);
+  box-shadow: var(--shadow-glass-highlight), var(--shadow-xl);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  max-width: 420px;
+  width: 90%;
+
+  /* Slide-up entrance */
+  animation: resume-slide-up var(--duration-slow) var(--ease-spring) forwards;
+}
+
+@keyframes resume-slide-up {
+  from {
+    transform: translateX(-50%) translateY(120px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}
+
+.resume-toast-text {
+  flex: 1;
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-snug);
+}
+
+.resume-toast-text strong {
+  color: var(--color-text-primary);
+  font-weight: var(--weight-semibold);
+}
+
+.resume-toast-percent {
+  font-family: var(--font-mono);
+  color: var(--color-accent);
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-xs);
+}
+
+.resume-toast-btn {
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  border: none;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.resume-toast-btn.primary {
+  background: var(--gradient-accent);
+  color: var(--color-text-on-accent);
+  box-shadow: var(--shadow-sm), var(--shadow-glow-accent);
+}
+
+.resume-toast-btn.primary:hover {
+  box-shadow: var(--shadow-md), var(--shadow-glow-accent);
+  transform: translateY(-1px);
+}
+
+.resume-toast-btn.primary:active {
+  transform: scale(0.96);
+}
+
+.resume-toast-btn.dismiss {
+  background: transparent;
+  color: var(--color-text-muted);
+  padding: var(--space-2);
+}
+
+.resume-toast-btn.dismiss:hover {
+  color: var(--color-text-primary);
+}
+
+/* ── Slide out when dismissing ── */
+.resume-toast.dismissing {
+  animation: resume-slide-down var(--duration-normal) var(--ease-default) forwards;
+}
+
+@keyframes resume-slide-down {
+  from {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-50%) translateY(120px);
+    opacity: 0;
+  }
+}
+
+/* ── Mobile adjustments ── */
+@media (max-width: 640px) {
+  .reading-eta-badge {
+    bottom: var(--space-4);
+    right: var(--space-4);
+    font-size: var(--text-xs);
+    padding: var(--space-1) var(--space-3);
+  }
+
+  .resume-toast {
+    bottom: var(--space-4);
+    padding: var(--space-3) var(--space-4);
+    gap: var(--space-3);
+  }
+
+  .reading-meta {
+    font-size: var(--text-xs);
+    padding: var(--space-1) var(--space-3);
+  }
+}

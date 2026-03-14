@@ -1,17 +1,22 @@
-/* ===== Image Gallery / Slideshow ===== */
+/* =================================================================
+   IMAGE GALLERY
+   Glass scroll container with elevated images.
+   ================================================================= */
+
 .gallery-wrapper {
-  margin: 2rem 0;
+  margin: var(--space-8) 0;
 }
 
 .gallery-scroll {
   display: flex;
-  gap: 0.85rem;
+  gap: var(--space-4);
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scrollbar-width: thin;
-  scrollbar-color: var(--border-color) transparent;
-  padding-bottom: 0.75rem;
+  scrollbar-color: var(--color-border-strong) transparent;
+  padding-bottom: var(--space-3);
   -webkit-overflow-scrolling: touch;
+  padding: var(--space-2);
 }
 
 .gallery-scroll::-webkit-scrollbar {
@@ -21,8 +26,8 @@
   background: transparent;
 }
 .gallery-scroll::-webkit-scrollbar-thumb {
-  background-color: var(--border-color);
-  border-radius: 999px;
+  background-color: var(--color-border-strong);
+  border-radius: var(--radius-full);
 }
 
 .gallery-scroll img {
@@ -31,17 +36,23 @@
   max-width: 500px;
   height: 300px;
   object-fit: cover;
-  border-radius: 12px !important;
+  border-radius: var(--radius-lg) !important;
   margin: 0 !important;
   scroll-snap-align: start;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
-  border: 1px solid var(--card-border) !important;
+  box-shadow: var(--shadow-md) !important;
+  border: 1px solid var(--glass-border) !important;
+  transition: box-shadow var(--transition-normal), transform var(--transition-fast);
+}
+
+.gallery-scroll img:hover {
+  box-shadow: var(--shadow-xl) !important;
+  transform: translateY(-3px);
 }
 
 .gallery-caption {
-  font-size: 0.85rem;
-  color: var(--muted-text);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
   font-style: italic;
   text-align: center;
-  margin-top: 0.5rem;
+  margin-top: var(--space-3);
 }

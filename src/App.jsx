@@ -28,7 +28,7 @@ function App() {
   if (!config) return <p>Loading...</p>;
 
   return (
-    <div>
+    <div className="fluid-bg">
       {/* <Announcement/> */}
       <Navbar title={config.site.title} />
 

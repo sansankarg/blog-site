@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { triggerHaptic } from '../utils/haptics';
 
 const Navbar = ({ title }) => {
   const navigate = useNavigate();
@@ -12,7 +13,10 @@ const Navbar = ({ title }) => {
     localStorage.setItem('theme', darkMode ? 'dark' : 'light');
   }, [darkMode]);
 
-  const toggleDarkMode = () => setDarkMode(prev => !prev);
+  const toggleDarkMode = () => {
+    triggerHaptic(12);
+    setDarkMode(prev => !prev);
+  };
 
   return (
     

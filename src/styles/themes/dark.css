@@ -1,0 +1,81 @@
+/* =================================================================
+   DARK THEME
+   Overrides ONLY token values. No component selectors.
+   ================================================================= */
+
+body.dark-mode {
+  /* ── Surfaces ── */
+  --color-bg: #0c1222;
+  --color-bg-soft: #121b30;
+  --color-surface: rgba(20, 30, 55, 0.75);
+  --color-surface-raised: rgba(25, 38, 68, 0.85);
+  --color-surface-overlay: rgba(15, 23, 42, 0.6);
+
+  /* ── Text ── */
+  --color-text-primary: #e2e8f0;
+  --color-text-secondary: #cbd5e1;
+  --color-text-muted: #64748b;
+  --color-text-inverse: #0f172a;
+
+  /* ── Accent ── */
+  --color-accent: #818cf8;
+  --color-accent-hover: #a5b4fc;
+  --color-accent-soft: rgba(129, 140, 248, 0.15);
+  --color-accent-glow: rgba(129, 140, 248, 0.25);
+
+  /* ── Interactive ── */
+  --color-link: #818cf8;
+  --color-link-hover: #a5b4fc;
+  --color-focus-ring: rgba(129, 140, 248, 0.4);
+
+  /* ── Borders ── */
+  --color-border: rgba(148, 163, 184, 0.12);
+  --color-border-strong: rgba(148, 163, 184, 0.22);
+  --color-border-glow: rgba(129, 140, 248, 0.2);
+
+  /* ── Status ── */
+  --color-success-soft: rgba(34, 197, 94, 0.15);
+  --color-info-soft: rgba(59, 130, 246, 0.15);
+  --color-warning-soft: rgba(234, 179, 8, 0.15);
+  --color-danger-soft: rgba(239, 68, 68, 0.15);
+
+  /* ── Glass ── */
+  --glass-bg: rgba(15, 23, 42, 0.50);
+  --glass-bg-strong: rgba(15, 23, 42, 0.70);
+  --glass-border: rgba(148, 163, 184, 0.12);
+
+  /* ── Gradients ── */
+  --gradient-surface: linear-gradient(135deg, rgba(20, 30, 55, 0.8), rgba(15, 23, 42, 0.5));
+
+  /* ── Shadows (darker, more dramatic) ── */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.15);
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.12);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.25), 0 2px 6px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.18);
+  --shadow-xl: 0 16px 40px rgba(0, 0, 0, 0.35), 0 8px 20px rgba(0, 0, 0, 0.2);
+  --shadow-2xl: 0 24px 56px rgba(0, 0, 0, 0.4), 0 12px 28px rgba(0, 0, 0, 0.25);
+
+  /* Neumorphic (dark variant) */
+  --shadow-neu-raised:
+    6px 6px 14px rgba(0, 0, 0, 0.3),
+    -6px -6px 14px rgba(255, 255, 255, 0.04);
+  --shadow-neu-pressed:
+    inset 4px 4px 10px rgba(0, 0, 0, 0.3),
+    inset -4px -4px 10px rgba(255, 255, 255, 0.03);
+
+  --shadow-inset-sm: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  --shadow-inset-md: inset 0 3px 8px rgba(0, 0, 0, 0.25);
+
+  /* Glow (more vibrant in dark) */
+  --shadow-glow-accent: 0 0 24px rgba(129, 140, 248, 0.3), 0 0 48px rgba(129, 140, 248, 0.12);
+  --shadow-glow-soft: 0 0 30px rgba(129, 140, 248, 0.15);
+  --shadow-glass-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  --shadow-glass-border: 0 0 0 1px rgba(255, 255, 255, 0.06);
+
+  /* ── Fluid Background Blobs (richer in dark) ── */
+  --blob-1: rgba(79, 70, 229, 0.20);
+  --blob-2: rgba(124, 58, 237, 0.18);
+  --blob-3: rgba(20, 184, 166, 0.14);
+  --blob-4: rgba(236, 72, 153, 0.12);
+  --blob-5: rgba(6, 182, 212, 0.12);
+}

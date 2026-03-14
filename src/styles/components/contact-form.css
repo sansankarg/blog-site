@@ -1,25 +1,32 @@
-/* ===== Contact Form Component ===== */
+/* =================================================================
+   CONTACT FORM
+   Glass panel, neumorphic inset inputs, tactile submit button.
+   ================================================================= */
+
 .contact-form-container {
-  margin: 2.5rem 0;
-  padding: 1.5rem;
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 12px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  margin: var(--space-10) 0;
+  padding: var(--space-6);
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-glass-highlight), var(--shadow-md);
 }
 
 .contact-form-title {
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: var(--title-color);
-  margin-bottom: 1.25rem;
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-6);
   text-align: center;
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: var(--space-4);
 }
 
 .form-group .sr-only {
@@ -33,42 +40,64 @@
   border: 0;
 }
 
-.form-group input, 
+.form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 0.75rem 1rem;
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  font-family: inherit;
-  font-size: 0.95rem;
-  transition: border-color 0.2s;
+  padding: var(--space-3) var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  box-shadow: var(--shadow-inset-sm);
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background var(--transition-fast);
 }
 
-.form-group input:focus, 
+.form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: var(--link-color);
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-inset-sm), 0 0 0 3px var(--color-focus-ring);
+  background: var(--color-surface-raised);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--color-text-muted);
 }
 
 .contact-submit-btn {
-  background: var(--link-color);
-  color: var(--text-color-inverse);
-  padding: 0.75rem;
+  background: var(--gradient-accent);
+  color: var(--color-text-on-accent);
+  padding: var(--space-3) var(--space-5);
   border: none;
-  border-radius: 8px;
-  font-weight: 600;
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-base);
   cursor: pointer;
-  transition: opacity 0.2s;
+  box-shadow: var(--shadow-sm), var(--shadow-glow-accent);
+  transition: all var(--transition-fast);
+  position: relative;
+  overflow: hidden;
 }
 
 .contact-submit-btn:hover:not(:disabled) {
-  opacity: 0.9;
+  box-shadow: var(--shadow-md), var(--shadow-glow-accent);
+  transform: translateY(-1px);
+}
+
+.contact-submit-btn:active:not(:disabled) {
+  transform: scale(0.97);
+  box-shadow: var(--shadow-neu-pressed);
 }
 
 .contact-submit-btn:disabled {
-  opacity: 0.6;
+  opacity: 0.5;
   cursor: not-allowed;
 }
 
@@ -77,21 +106,20 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem 1rem;
-  color: #22c55e;
+  padding: var(--space-8) var(--space-4);
+  color: var(--color-success);
   text-align: center;
 }
 
 .success-icon {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  font-size: var(--text-4xl);
+  margin-bottom: var(--space-3);
+  filter: drop-shadow(0 0 8px var(--color-success));
 }
 
 .contact-form-error {
-  color: #ef4444;
-  font-size: 0.85rem;
+  color: var(--color-danger);
+  font-size: var(--text-sm);
   text-align: center;
-  margin-top: 0.5rem;
+  margin-top: var(--space-2);
 }
-
-/* Dark mode adjustments done inherently via CSS variables */

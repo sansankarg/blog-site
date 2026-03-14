@@ -1,13 +1,23 @@
-/* ===== Hero Banner ===== */
+/* =================================================================
+   HERO BANNER
+   Fluid overlay with depth shadow and ambient glow text.
+   ================================================================= */
+
 .hero-banner {
   position: relative;
-  border-radius: 16px;
+  border-radius: var(--radius-2xl);
   overflow: hidden;
   height: 360px;
-  margin: 2rem 0;
+  margin: var(--space-8) 0;
   display: flex;
   align-items: flex-end;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-xl);
+  transition: box-shadow var(--transition-normal), transform var(--transition-normal);
+}
+
+.hero-banner:hover {
+  box-shadow: var(--shadow-2xl), var(--shadow-glow-soft);
+  transform: translateY(-2px);
 }
 
 .hero-banner img {
@@ -25,27 +35,35 @@
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.1) 60%, transparent 100%);
+  background: linear-gradient(
+    to top,
+    rgba(15, 23, 42, 0.85) 0%,
+    rgba(15, 23, 42, 0.3) 50%,
+    transparent 100%
+  );
 }
 
 .hero-text {
   position: relative;
   z-index: 1;
-  padding: 2rem;
+  padding: var(--space-8);
   color: white;
 }
 
 .hero-text h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 0.4rem;
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-bold);
+  margin-bottom: var(--space-2);
   color: white !important;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  letter-spacing: var(--tracking-tight);
 }
 
 .hero-text p {
-  font-size: 1rem;
+  font-size: var(--text-base);
   opacity: 0.85;
   margin: 0;
   color: white !important;
+  line-height: var(--leading-relaxed);
 }

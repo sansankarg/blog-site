@@ -1,0 +1,236 @@
+/* =================================================================
+   MARKDOWN CONTENT
+   Glass content container, styled headings, code blocks, images.
+   ================================================================= */
+
+/* ── Markdown Page Shell ── */
+.markdown-page {
+  width: 90%;
+  max-width: var(--container-md);
+  margin: 0 auto;
+  padding: var(--space-8) 0;
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  line-height: var(--leading-relaxed);
+}
+
+/* ── Post Header ── */
+.post-header {
+  margin-bottom: var(--space-8);
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--color-border);
+  position: relative;
+}
+
+.post-header::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  background: var(--gradient-accent);
+  border-radius: var(--radius-full);
+}
+
+.post-header .post-title {
+  font-family: var(--font-display);
+  font-size: var(--text-4xl);
+  font-weight: var(--weight-bold);
+  margin-bottom: var(--space-3);
+  color: var(--color-text-primary);
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--leading-tight);
+}
+
+.post-header .post-date {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-2);
+  font-weight: var(--weight-medium);
+}
+
+.post-header .post-desc {
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+}
+
+/* ── Content Typography ── */
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3 {
+  font-family: var(--font-display);
+  font-weight: var(--weight-bold);
+  color: var(--color-text-primary);
+  margin-top: var(--space-10);
+  margin-bottom: var(--space-4);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+}
+
+.markdown-content h1 {
+  font-size: var(--text-3xl);
+}
+
+.markdown-content h2 {
+  font-size: var(--text-2xl);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.markdown-content h3 {
+  font-size: var(--text-xl);
+}
+
+.markdown-content p {
+  margin: var(--space-4) 0;
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+}
+
+.markdown-content a {
+  color: var(--color-link);
+  text-decoration: none;
+  font-weight: var(--weight-medium);
+  border-bottom: 1px solid var(--color-accent-soft);
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.markdown-content a:hover {
+  color: var(--color-link-hover);
+  border-bottom-color: var(--color-link-hover);
+  text-decoration: none;
+}
+
+/* ── Inline Code ── */
+.markdown-content code {
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+  padding: 0.15em 0.45em;
+  border-radius: var(--radius-xs);
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  font-weight: var(--weight-medium);
+}
+
+/* ── Code Blocks ── */
+.markdown-content pre {
+  background: var(--glass-bg-strong);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  overflow-x: auto;
+  box-shadow: var(--shadow-glass-highlight), var(--shadow-md);
+  margin: var(--space-6) 0;
+}
+
+.markdown-content pre code {
+  background: none;
+  color: var(--color-text-primary);
+  padding: 0;
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+}
+
+/* ── Lists ── */
+.markdown-content ul,
+.markdown-content ol {
+  padding-left: var(--space-6);
+  margin: var(--space-4) 0;
+}
+
+.markdown-content li {
+  margin-bottom: var(--space-2);
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+}
+
+.markdown-content li::marker {
+  color: var(--color-accent);
+}
+
+/* ── Images ── */
+.markdown-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-xl);
+  display: block;
+  margin: var(--space-8) auto;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--glass-border);
+  object-fit: cover;
+  transition: box-shadow var(--transition-normal), transform var(--transition-normal);
+}
+
+.markdown-content img:hover {
+  box-shadow: var(--shadow-xl), var(--shadow-glow-soft);
+  transform: translateY(-2px);
+}
+
+/* ── Blockquote ── */
+.markdown-content blockquote {
+  border-left: 3px solid var(--color-accent);
+  margin: var(--space-6) 0;
+  padding: var(--space-4) var(--space-6);
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+/* ── Horizontal Rules ── */
+.markdown-content hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--color-border-strong),
+    var(--color-accent-soft),
+    var(--color-border-strong),
+    transparent
+  );
+  margin: var(--space-10) 0;
+}
+
+/* ── Tables ── */
+.markdown-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--space-6) 0;
+  background: var(--glass-bg);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.markdown-content th,
+.markdown-content td {
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.markdown-content th {
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-primary);
+  background: var(--color-surface);
+}
+
+/* ── Mobile ── */
+@media (max-width: 640px) {
+  .post-header .post-title {
+    font-size: var(--text-2xl);
+  }
+  .markdown-content h1 {
+    font-size: var(--text-2xl);
+  }
+  .markdown-content h2 {
+    font-size: var(--text-xl);
+  }
+}

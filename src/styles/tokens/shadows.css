@@ -1,0 +1,36 @@
+/* =================================================================
+   SHADOW TOKENS
+   6-level elevation system + neumorphic + inset + glow.
+   ================================================================= */
+
+:root {
+  /* ── Elevation System (6 levels) ── */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.10), 0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 16px 40px rgba(0, 0, 0, 0.12), 0 8px 20px rgba(0, 0, 0, 0.06);
+  --shadow-2xl: 0 24px 56px rgba(0, 0, 0, 0.15), 0 12px 28px rgba(0, 0, 0, 0.08);
+
+  /* ── Neumorphic ── */
+  --shadow-neu-raised:
+    6px 6px 14px rgba(0, 0, 0, 0.08),
+    -6px -6px 14px rgba(255, 255, 255, 0.9);
+  --shadow-neu-pressed:
+    inset 4px 4px 10px rgba(0, 0, 0, 0.08),
+    inset -4px -4px 10px rgba(255, 255, 255, 0.7);
+
+  /* ── Inset ── */
+  --shadow-inset-sm: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+  --shadow-inset-md: inset 0 3px 8px rgba(0, 0, 0, 0.09);
+
+  /* ── Glow ── */
+  --shadow-glow-accent: 0 0 20px rgba(79, 70, 229, 0.2), 0 0 40px rgba(79, 70, 229, 0.08);
+  --shadow-glow-teal: 0 0 20px rgba(20, 184, 166, 0.2);
+  --shadow-glow-pink: 0 0 20px rgba(236, 72, 153, 0.2);
+  --shadow-glow-soft: 0 0 30px rgba(79, 70, 229, 0.10);
+
+  /* ── Glass Highlight ── */
+  --shadow-glass-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  --shadow-glass-border: 0 0 0 1px rgba(255, 255, 255, 0.15);
+}
